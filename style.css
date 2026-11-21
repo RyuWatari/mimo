@@ -17,7 +17,7 @@ main{flex:1;display:grid;grid-template-columns:minmax(300px,1fr) minmax(360px,1.
 .stage{display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 40%,#fff,#e9ecf6)}
 #prev svg{width:min(100%,520px);max-height:72vh;height:auto;display:block;filter:drop-shadow(0 12px 18px rgba(80,80,120,.25))}
 .panel{display:flex;flex-direction:column;gap:14px}
-#backToForm{align-self:center}
+#backToForm{align-self:stretch;width:100%;padding:18px;font-size:20px;border-radius:20px}
 #tabs{display:flex;gap:8px;flex-wrap:wrap}
 #tabs button{padding:10px 14px;border-radius:14px;background:#e6e8f2;font-weight:700;color:var(--mute)}
 #tabs button.on{background:var(--pri);color:#fff;box-shadow:0 6px 14px rgba(124,77,255,.4)}
