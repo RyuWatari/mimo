@@ -46,7 +46,7 @@ function prep(text, pre) {
 
 // ini perlu dinaikin V nya setiap berubah di assets
 async function loadAll() {
-  const V = 3; // naikkan angka ini setiap kali ada file di assets/svg yang diganti
+  const V = 4; // naikkan angka ini setiap kali ada file di assets/svg yang diganti
   let n = 0;
   // ,done = 0;
   const jobs = [];
