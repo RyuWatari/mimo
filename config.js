@@ -29,7 +29,7 @@ const CONFIG = {
   categories: [
     
     // buat rambut bagian depan
-    { k:'rambut depan', t:'Poni', color:'#E8E29F', z:120, crop:'0 0 694 470', default:1,
+    { k:'rambut depan', t:'Poni', color:'#E8E29F', z:80, crop:'0 0 694 470', default:1,
       palette:['#1A0F0A',
           '#4A2C1A', '#675345', '#8B5A2B', '#BFAE86', '#CCAD8E', '#C9A227', '#E8E29F',
           '#D9534F', '#7FBCD4', '#B37BEC', '#F4A6C8',
@@ -130,7 +130,7 @@ const CONFIG = {
       ]
     },
 
-    { k:'alis', t:'Alis', color:'#1A0505', z:80, crop:'60 190 570 190', default:1,
+    { k:'alis', t:'Alis', color:'#1A0505', z:100, crop:'60 190 570 190', default:1,
       palette:['#1A0505','#4A2C1A','#8B5A2B','#E8E29F','#222222','#7B5EA7'],
       map:{'#1A0505':'self'},
       parts:[ null,
