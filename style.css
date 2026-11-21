@@ -32,6 +32,8 @@ h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute
 .sw.front-selected{position:relative}
 .sw-front-mark{position:absolute;z-index:2;right:-5px;bottom:-5px;width:15px;height:15px;border:2px solid #fff;border-radius:50%;background:#00a884;box-shadow:0 1px 4px rgba(0,0,0,.65);pointer-events:none}
 .save{margin-top:auto;background:linear-gradient(135deg,#8b5cf6,#4f35d6);color:#fff;font-weight:800;font-size:20px;padding:18px;border-radius:20px;box-shadow:0 10px 22px rgba(79,53,214,.4)}
+.back{margin-top:auto;background:var(--card);font-weight:600;font-size:20px;padding:18px;border-radius:20px;box-shadow:var(--sh)}
+
 .modal{position:fixed;inset:0;background:rgba(30,30,60,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:9}
 .modal.show{display:flex}
 .box{position:relative;background:#fff;border-radius:28px;padding:28px;max-width:420px;width:100%;text-align:center;display:flex;flex-direction:column;gap:14px}
