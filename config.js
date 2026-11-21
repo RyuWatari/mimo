@@ -46,7 +46,7 @@ const CONFIG = {
            '#D11900':'self','#450A0A':'self*0.78'},
       parts:[ null,
         {name:'',    file:'Poni Pendek Depan.svg',   x:48.589, y:75,},  // path pertama = rambut belakang
-        {name:'', file:'Poni Panjang Depan.svg', x:80, y:77, z:120,},
+        {name:'', file:'Poni Panjang Depan.svg', x:80, y:77,},
         // backpath 1234 buat ngurutin darimana sing paling belakang
         {name:'', file:'Poni Twintail Depan.svg', x:80, y:80,},
         //  backPaths:[0,1,2,3,4]
