@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mimo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="intro">
+    <!-- navbar -->
+<header>
+    <div class="brand">
+        Mimo 
+        <span>MiniMe</span>
+    </div>
+    <button class="ghost" id="rnd">
+        🎲 Acak
+    </button>
+    <button class="ghost" id="rst">
+        ↺ Reset
+    </button>
+
+</header>
+<nav id="avbar"></nav>
+<section id="intro">
+    <div class="icard">
+        <div class="brand">Mimo <span>MiniMe</span></div>
+        <h1>Pesan keychain avatar</h1>
+        <p>Isi data singkat dulu, lalu buat avatarmu.</p>
+        <label>Nama lengkap<input type="text" id="cn" maxlength="40" autocomplete="name"></label>
+        <label>Nomor telepon (WhatsApp)<input type="tel" id="cp" inputmode="tel" maxlength="16" placeholder="Contoh: 081234567890" autocomplete="tel"></label>
+        <p class="small" id="iprice"></p>
+        <p class="err" id="ierr" role="alert"></p>
+        <button class="save" id="go" style="margin:0" disabled>Memuat avatar...</button>
+    </div>
+</section>
+
+<!-- isian -->
+<main>
+    <section class="stage">
+        <div id="prev"></div>
+    </section>
+    <section class="panel">
+        <button class="ghost" id="backToForm" type="button">← Kembali ke form</button>
+        <nav id="tabs"></nav>
+        <h3 id="ttl"></h3>
+        <div id="opts"></div>
+        <h3>Warna</h3>
+        <div id="cols"></div>
+        <label class="charm"><input type="checkbox" id="charm"> Add-on charm untuk avatar ini (+Rp 3.000)</label>
+        <button class="save" id="save">Lihat ringkasan</button>
+    </section>
+</main>
+<section id="admin">
+    <header style="padding-left:0">
+        <div class="brand">Admin · Antrean Cetak</div>
+        <button class="ghost" id="back">← Kembali</button>
+    </header>
+    <div id="alogin" class="icard" hidden>
+        <h1>Masuk admin</h1>
+        <label>Email<input type="email" id="aem" autocomplete="username"></label>
+        <label>Password<input type="password" id="apw" autocomplete="current-password"></label>
+        <p class="err" id="aerr" role="alert"></p>
+        <button class="save" id="alog" style="margin:0">Masuk</button>
+    </div>
+    <div id="apanel" hidden>
+        <p class="err" id="anot" hidden>Akun ini belum terdaftar sebagai admin. Jalankan 02_admin.sql dengan email akun ini.</p>
+        <div class="abar">
+            <label class="charm"><input type="checkbox" id="aopen"> Pemesanan dibuka</label>
+            <button class="ghost" id="aref" type="button">Muat ulang</button>
+            <button class="ghost" id="aout" type="button">Keluar</button>
+        </div>
+        <details class="aset">
+            <summary>Pengaturan harga</summary>
+            <label>Harga per avatar (Rp)<input type="number" id="apr" min="1000" step="500"></label>
+            <label>Tambahan charm (Rp)<input type="number" id="ach" min="0" step="500"></label>
+            <label>Maksimal avatar per pesanan<input type="number" id="amx" min="1" max="20"></label>
+            <button class="save" id="aset" type="button" style="margin:0">Simpan pengaturan</button>
+            <p class="small">Berlaku untuk pesanan baru. Pesanan yang sudah dibuat tetap memakai harga lamanya.</p>
+        </details>
+        <div class="chips" id="astat"></div>
+        <input type="search" id="aq" class="asearch" placeholder="Cari kode, nama, atau telepon">
+        <div class="grid" id="alist"></div>
+    </div>
+</section>
+<div class="modal" id="m1">
+    <div class="box">
+        <button class="modal-close" id="closeSave" type="button" aria-label="Tutup">X</button>
+        <h2>Ringkasan pesanan</h2>
+        <p class="small">Setelah dikonfirmasi, pesanan dikunci dan tidak bisa diubah. Mau ganti? Buat pesanan baru.</p>
+        <div id="sum"></div>
+        <button class="save" id="ok" style="margin:0">Konfirmasi pesanan</button>
+        <button class="ghost" id="cancelSave" type="button">Kembali ubah avatar</button>
+    </div>
+</div>
+<div class="modal" id="m2">
+    <div class="box">
+        <h2>Pesanan tersimpan</h2>
+        <div id="keys"></div>
+        <p id="who"></p>
+        <p class="small">Kode pesanan (tunjukkan ke kasir)</p>
+        <div class="code" id="code"></div>
+        <div class="pay" id="pay"></div>
+        <button class="save" id="wa" style="margin:0;font-size:16px;padding:14px">Kirim bukti bayar via WhatsApp</button>
+        <button class="ghost" id="img" type="button">Simpan tiket sebagai gambar</button>
+        <button class="ghost" id="done" type="button">Buat pesanan baru</button>
+    </div>
+</div>
+<div class="modal" id="m3">
+    <div class="box">
+        <button class="modal-close" id="close3" type="button" aria-label="Tutup">X</button>
+        <h2>Tiket kamu</h2>
+        <img id="timg" alt="Tiket pesanan Mimo">
+        <p class="small">Tekan lama gambar lalu pilih simpan gambar, atau pakai tombol di bawah.</p>
+        <a class="save" id="tdl" download style="text-decoration:none;margin:0;font-size:16px;padding:14px">Simpan ke perangkat</a>
+    </div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
